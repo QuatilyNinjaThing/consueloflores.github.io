@@ -1,114 +1,335 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - Consuelo Flores</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f9faf9;
-            color: #333;
-        }
-        header {
-            background: #4e8b72;
-            padding: 60px 20px;
-            color: white;
-            text-align: center;
-        }
-        section {
-            max-width: 900px;
-            margin: auto;
-            padding: 40px 20px;
-        }
-        h2 {
-            border-left: 6px solid #4e8b72;
-            padding-left: 12px;
-            color: #2e473b;
-        }
-        .project, .card {
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            margin-top: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.08);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio Profesional - Consuelo Flores Pérez</title>
+  <style>
+    :root {
+      --verde: #4e8b72;
+      --verde-oscuro: #2e473b;
+      --fondo: #f9faf9;
+      --texto: #333333;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--fondo);
+      color: var(--texto);
+    }
+    header {
+      background: var(--verde);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0 0 10px 0;
+      font-size: 2rem;
+    }
+    header p {
+      margin: 0;
+      font-size: 1.05rem;
+    }
+    nav {
+      background: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav ul {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 10px 20px;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--verde-oscuro);
+      font-size: 0.9rem;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(78,139,114,0.25);
+      background: #ffffff;
+    }
+    nav a:hover {
+      background: rgba(78,139,114,0.08);
+    }
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      margin: 0 0 16px;
+      padding-left: 10px;
+      border-left: 5px solid var(--verde);
+      color: var(--verde-oscuro);
+      font-size: 1.4rem;
+    }
+    p {
+      line-height: 1.6;
+      font-size: 0.98rem;
+    }
+    .grid-2 {
+      display: grid;
+      gap: 20px;
+    }
+    @media (min-width: 768px) {
+      .grid-2 {
+        grid-template-columns: 1.2fr 1fr;
+      }
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 18px 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      margin-top: 14px;
+    }
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 6px;
+      font-size: 1.1rem;
+      color: var(--verde-oscuro);
+    }
+    .tag {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(78,139,114,0.08);
+      color: var(--verde-oscuro);
+      font-size: 0.8rem;
+      margin-right: 6px;
+      margin-top: 4px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: var(--verde);
+      color: white;
+      text-decoration: none;
+      font-size: 0.95rem;
+      margin-right: 10px;
+      margin-top: 8px;
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--verde-oscuro);
+      border: 1px solid var(--verde);
+    }
+    .btn:hover {
+      filter: brightness(1.05);
+    }
+    ul {
+      padding-left: 20px;
+      margin: 6px 0 0;
+      font-size: 0.95rem;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      padding: 18px;
+      color: #777;
+    }
+  </style>
 </head>
-
 <body>
 
 <header>
-    <h1>Consuelo Flores</h1>
-    <p>Ingeniería en Computación e Informática</p>
+  <h1>Consuelo Flores Pérez</h1>
+  <p>Estudiante de Ingeniería en Computación e Informática – Universidad Andrés Bello</p>
 </header>
 
-<section>
-    <h2>Perfil Profesional</h2>
+<nav>
+  <ul>
+    <li><a href="#perfil">Perfil profesional</a></li>
+    <li><a href="#habilidades">Habilidades</a></li>
+    <li><a href="#proyectos">Proyectos y experiencia</a></li>
+    <li><a href="#practica">Práctica profesional</a></li>
+    <li><a href="#servicios">Servicios que ofrezco</a></li>
+    <li><a href="#certificaciones">Certificaciones</a></li>
+    <li><a href="#cv">CV y carta</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<main>
+  <!-- PERFIL -->
+  <section id="perfil" class="grid-2">
+    <div>
+      <h2>Perfil profesional</h2>
+      <p>
+        Soy estudiante de Ingeniería en Computación e Informática con experiencia en análisis de datos,
+        automatización y digitalización de procesos. Durante mi práctica profesional en Empresas CMPC
+        trabajé con Power BI, SQL y BigQuery para apoyar el área de compras mediante dashboards y flujos
+        de datos automatizados. :contentReference[oaicite:0]{index=0}
+      </p>
+      <p>
+        Complemento mi formación con certificaciones en data science, ciberseguridad, redes y cloud,
+        lo que refuerza mi interés en análisis de datos, soluciones cloud y seguridad informática. Me
+        motiva aplicar tecnología para resolver problemas reales y aportar a proyectos de transformación
+        digital. :contentReference[oaicite:1]{index=1}
+      </p>
+    </div>
+    <div>
+      <h2>Datos académicos</h2>
+      <div class="card">
+        <h3>Ingeniería en Computación e Informática</h3>
+        <p>Universidad Andrés Bello (UNAB) – Santiago, Chile</p>
+        <p>Estado: estudiante en curso.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HABILIDADES -->
+  <section id="habilidades">
+    <h2>Habilidades técnicas y blandas</h2>
+    <div class="card">
+      <h3>Habilidades técnicas</h3>
+      <p>
+        <span class="tag">Power BI</span>
+        <span class="tag">DAX</span>
+        <span class="tag">SQL</span>
+        <span class="tag">BigQuery</span>
+        <span class="tag">SAP Ariba (datos)</span>
+        <span class="tag">Python</span>
+        <span class="tag">Redes (CCNA)</span>
+        <span class="tag">Azure fundamentals</span>
+      </p>
+      <h3>Habilidades blandas</h3>
+      <p>
+        Pensamiento analítico, comunicación clara, aprendizaje autónomo,
+        organización, trabajo en equipo y orientación a resultados.
+      </p>
+      <h3>Idiomas</h3>
+      <p>Español nativo – Inglés nivel alto. :contentReference[oaicite:2]{index=2}</p>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos">
+    <h2>Proyectos y experiencia relevante</h2>
+
+    <div class="card">
+      <h3>Care Connect – Premio Endowment UNAB 2023</h3>
+      <p>
+        Desarrollo de una aplicación y prototipo de reloj inteligente para el monitoreo
+        de adultos mayores y personas con necesidades especiales. Integración de sensores
+        para pulsos, pasos y ubicación, y diseño de una página web para visualización de
+        datos y gestión. Proyecto ganador del Premio Endowment UNAB 2023 por innovación
+        tecnológica. :contentReference[oaicite:3]{index=3}
+      </p>
+      <p>
+        <strong>Tecnologías y focos:</strong> sensores, prototipo wearable, visualización
+        de datos web, diseño centrado en el usuario.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Dashboards y análisis de compras – Empresas CMPC</h3>
+      <p>
+        Desarrollo de dashboards en Power BI para el área de Procurement, con métricas de
+        compras, proveedores y procesos. Creación de modelos de datos, medidas DAX y
+        visualizaciones para la toma de decisiones. :contentReference[oaicite:4]{index=4}
+      </p>
+      <p>
+        <strong>Tecnologías:</strong> Power BI, SQL, BigQuery, SAP Ariba (API).
+      </p>
+    </div>
+  </section>
+
+  <!-- PRÁCTICA PROFESIONAL -->
+  <section id="practica">
+    <h2>Práctica profesional</h2>
+    <div class="card">
+      <h3>Empresas CMPC – Área Procurement</h3>
+      <p>
+        Participé en la digitalización y análisis de datos de procesos de abastecimiento:
+      </p>
+      <ul>
+        <li>Creación de dashboards en Power BI con modelado DAX.</li>
+        <li>Consultas SQL y vistas en BigQuery conectadas a la API de SAP Ariba.</li>
+        <li>Contribución a la optimización y automatización de procesos del área de compras.</li>
+      </ul>
+      :contentReference[oaicite:5]{index=5}
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios">
+    <h2>Servicios que puedo ofrecer</h2>
+    <div class="card">
+      <ul>
+        <li>Creación de dashboards y reportes interactivos en Power BI.</li>
+        <li>Consultas SQL y análisis de datos en entornos como BigQuery.</li>
+        <li>Automatización y digitalización de procesos basados en datos.</li>
+        <li>Soporte en proyectos de transformación digital y toma de decisiones basada en KPIs.</li>
+        <li>Documentación técnica y levantamiento de requerimientos.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CERTIFICACIONES -->
+  <section id="certificaciones">
+    <h2>Certificaciones y formación complementaria</h2>
+    <div class="card">
+      <ul>
+        <li><strong>CCNA: Switching, Routing and Wireless Essentials – Cisco (2025):</strong> redes, protocolos de enrutamiento y seguridad básica de infraestructura.</li>
+        <li><strong>IBM Data Science Specialization – IBM (2025):</strong> análisis de datos con Python, estadística aplicada y modelado predictivo.</li>
+        <li><strong>Big Data: El impacto de los datos masivos en la sociedad actual – UAB (2024):</strong> fundamentos de Big Data y su aplicación empresarial.</li>
+        <li><strong>Microsoft Learn: Power BI y Azure Fundamentals – Microsoft (2025):</strong> modelado y visualización de datos, fundamentos de redes y seguridad en la nube.</li>
+        <li><strong>Foundations of Cybersecurity – Google (2024):</strong> gestión de riesgos, redes seguras y amenazas cibernéticas.</li>
+      </ul>
+      :contentReference[oaicite:6]{index=6}
+    </div>
+  </section>
+
+  <!-- CV Y CARTA -->
+  <section id="cv">
+    <h2>Currículum Vitae y carta de presentación</h2>
     <p>
-        Estudiante de Ingeniería en Computación e Informática con experiencia en desarrollo de software, análisis de datos y creación de soluciones tecnológicas accesibles. Interesada en desarrollo web, análisis de datos, automatización e IoT.
+      A continuación se pueden descargar mi CV actualizado y una carta de presentación
+      dirigida a potenciales empleadores, donde detallo mi experiencia en análisis de
+      datos, prácticas en CMPC y motivación por participar en proyectos tecnológicos
+      y de transformación digital. :contentReference[oaicite:7]{index=7}
     </p>
-</section>
+    <a class="btn" href="CurriculumVitaeCF.pdf" target="_blank">
+      Descargar Currículum Vitae (PDF)
+    </a>
+    <a class="btn btn-outline" href="Carta%20de%20presentacion.docx" target="_blank">
+      Descargar Carta de Presentación (DOCX)
+    </a>
+  </section>
 
-<section>
-    <h2>Habilidades</h2>
-
-    <div class="card">
-        <strong>Técnicas:</strong>
-        <p>Python, SQL, JavaScript, Power BI, BigQuery, Git, HTML, CSS, Figma.</p>
-
-        <strong>Blandas:</strong>
-        <p>Pensamiento crítico, comunicación, organización, autonomía, trabajo en equipo.</p>
-    </div>
-</section>
-
-<section>
-    <h2>Proyectos Destacados</h2>
-
-    <div class="project">
-        <h3>Invernadero Inteligente</h3>
-        <p>Sistema de monitoreo IoT para plantas, con sensores ambientales y app móvil.</p>
-    </div>
-
-    <div class="project">
-        <h3>Stae Sushi – E-commerce</h3>
-        <p>Sistema web de gestión de productos, pedidos y reportes.</p>
-    </div>
-
-    <div class="project">
-        <h3>Dashboard de Compras</h3>
-        <p>Dashboard interactivo con KPIs para análisis de compras usando Power BI.</p>
-    </div>
-</section>
-
-<section>
-    <h2>Experiencia en Práctica Profesional</h2>
-    <div class="card">
-        <p>Desarrollo de dashboards, modelamiento de datos, BigQuery, SAP Ariba, automatización.</p>
-    </div>
-</section>
-
-<section>
-    <h2>Servicios que Ofrezco</h2>
-    <div class="card">
-        <p>Desarrollo web, dashboards, SQL, automatización de reportes, soporte TI, prototipado UI.</p>
-    </div>
-</section>
-
-<section>
-    <h2>Certificaciones</h2>
-    <div class="card">
-        <p>Power BI, Git y GitHub, BigQuery, Scrum Fundamentals, Python Inicial.</p>
-    </div>
-</section>
-
-<section>
+  <!-- CONTACTO -->
+  <section id="contacto">
     <h2>Contacto</h2>
-    <p>Correo: tuemail@correo.com</p>
-    <p>LinkedIn: linkedin.com/in/consueloflores</p>
-    <p>GitHub: github.com/consueloflores</p>
-</section>
+    <div class="card">
+      <p><strong>Nombre:</strong> Consuelo Flores Pérez</p>
+      <p><strong>Ubicación:</strong> Santiago, Chile</p>
+      <p><strong>Teléfono:</strong> +56 9 2847 3479</p>
+      <p><strong>Correo:</strong> Fconsuelo156@gmail.com</p>
+      <p><strong>LinkedIn / GitHub:</strong> enlaces a completar.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Portafolio profesional – Consuelo Flores Pérez
+</footer>
 
 </body>
 </html>
